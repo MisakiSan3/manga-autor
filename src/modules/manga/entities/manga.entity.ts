@@ -35,30 +35,44 @@ export class Manga {
     code: string;
 
     @Column('varchar',{
-        name: 'Nombre',
+        name: 'Título',
         nullable: false,
-        comment: 'Nombre del Producto',
+        comment: 'Título del Manga',
     })
     title: string;
+
+    @Column('varchar',{
+        name: 'Edición',
+        nullable: false,
+        comment: 'Edición del Manga',
+    })
+    edicion: string;
+
+    @Column('varchar',{
+        name: 'Editorial',
+        nullable: true,
+        comment: 'Editorial del Manga',
+    })
+    editorial: string;
 
     @Column('integer',{
         name: 'price',
         nullable: false,
-        comment: 'Precio del Producto',    
+        comment: 'Precio del manga',    
     })
     price: number;
 
     @Column('varchar',{
         name: 'Description',
         nullable: false,
-        comment: 'Descripcion del Producto',
+        comment: 'Descripcion del manga',
     })
     Description: string;
 
     @Column('varchar',{
         name: 'images',
         nullable: false,
-        comment: 'Imagen del Producto',
+        comment: 'Imagen del manga',
     })
     images:string;
 

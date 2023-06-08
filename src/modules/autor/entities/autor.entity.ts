@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Manga } from "src/modules/manga/entities/manga.entity";
 import { PrimaryGeneratedColumn,CreateDateColumn,UpdateDateColumn,DeleteDateColumn,Column,OneToMany } from "typeorm";
 
@@ -18,7 +19,7 @@ export class Autor {
         type: 'timestamp',
         default: ()=> 'CURRENT_TIMESTAMP'
     })
-    updateAt = Date;
+    updateAt = Date;    
     
     @DeleteDateColumn({
         name: 'Deleted_at',
@@ -27,24 +28,30 @@ export class Autor {
     })
     deleteAt = Date;
 
+    @Column('integer',{
+        name: 'code',
+        nullable: false,
+        comment: 'Id del autor',    
+    })
+
     @Column('varchar',{
         name: 'nombre',
         nullable: false,
-        comment: 'nombre de la categoria'
+        comment: 'Nombre del autor'
     })
 
 
-    @Column('varchar',{
-        name: 'nombre',
+    @Column('integer',{
+        name: 'Age',
         nullable: false,
-        comment: 'nombre de la categoria'
+        comment: 'Edad del Autor'
     })
     name: string;
 
-    @Column('varchar',{
-        name: 'description',
+    @Column('date',{
+        name: 'Birthday',
         nullable: false,
-        comment: 'descripción de la categoria'
+        comment: 'Cumpleanios autor'
     })
     description: string;
 

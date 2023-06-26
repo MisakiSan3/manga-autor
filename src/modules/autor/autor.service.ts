@@ -51,9 +51,9 @@ export class AutorService {
           
       }
     }
-    async update(id: string, updateeventDto: UpdateAutorDto):Promise<UpdateResult | undefined> {
+    async update(id: string, updateAutorDto: UpdateAutorDto):Promise<UpdateResult | undefined> {
      try {
-         const autor: UpdateResult =  await this.autorRepostory.update(id,updateeventDto);
+         const autor: UpdateResult =  await this.autorRepostory.update(id,updateAutorDto);
          if (autor.affected === 0) {
           throw new error({
             type:'BAD_REQUEST',

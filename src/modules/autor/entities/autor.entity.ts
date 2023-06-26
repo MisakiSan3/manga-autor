@@ -11,40 +11,55 @@ export class Autor {
         default: ()=> 'CURRENT_TIMESTAMP'
     }
     )
-    createAt = Date;
+    createAt : Date;
 
     @UpdateDateColumn({
         name: 'Updated_at',
         type: 'timestamp',
         default: ()=> 'CURRENT_TIMESTAMP'
     })
-    updateAt = Date;
+    updateAt : Date;
     
     @DeleteDateColumn({
         name: 'Deleted_at',
         type: 'timestamp',
         nullable: true,
     })
-    deleteAt = Date;
+    deleteAt : Date;
 
+   
     @Column('varchar',{
         name: 'nombre',
         nullable: false,
-        comment: 'nombre de la categoria'
+        comment: 'nombre del autor'
     })
-
+    nombre: string;
 
     @Column('varchar',{
-        name: 'nombre',
+        name: 'apellido',
         nullable: false,
-        comment: 'nombre de la categoria'
+        comment: 'apellido del autor'
     })
-    name: string;
+    apellido: string;
+    
+    @Column('varchar',{
+        name: 'email',
+        nullable: false,
+        comment: 'email del autor'
+    })
+    email: string;
+
+    @Column('varchar',{
+        name: 'identificacion',
+        nullable: false,
+        comment: 'identificacion del autor'
+    })
+    identificacion: string;
 
     @Column('varchar',{
         name: 'description',
         nullable: false,
-        comment: 'descripción de la categoria'
+        comment: 'descripción del autor'
     })
     description: string;
 

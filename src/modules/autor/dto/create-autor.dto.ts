@@ -1,27 +1,33 @@
-import { IsDate, IsEmail, IsNotEmpty, IsNotEmptyObject, IsOptional, IsString, IsUUID } from "@nestjs/class-validator";
+import { IsDate, IsEmail,IsNumber, IsNotEmpty, IsNotEmptyObject, IsOptional, IsString, IsUUID } from "@nestjs/class-validator";
 import { Manga } from "src/modules/manga/entities/manga.entity";
+
 
 export class CreateAutorDto {
 
-    @IsDate()
     @IsOptional()
-    createAt : Date;
+    @IsDate()
+    createAt: Date;
 
-    @IsDate()
     @IsOptional()
-    updateAt : Date;
+    @IsDate()
+    updateAt: Date;    
     
-    @IsDate()
     @IsOptional()
-    deleteAt : Date;
+    @IsDate()
+    deleteAt: Date;
 
+    
     @IsString()
     @IsNotEmpty()
-    nombre: string
+    nombre: string;
 
-    @IsString()
+    @IsNumber()
     @IsNotEmpty()
-    apellido: string;
+    code: number;
+
+    @IsNumber()
+    @IsNotEmpty()
+    age: number;
     
     @IsEmail()
     @IsNotEmpty()
@@ -31,9 +37,9 @@ export class CreateAutorDto {
     @IsNotEmpty()
     identificacion: string;
 
-    @IsString()
-    @IsNotEmpty()
-    description: string;
+    @IsOptional()
+    @IsDate()
+    birthday: Date;
 
     @IsNotEmptyObject()
     manga: Manga

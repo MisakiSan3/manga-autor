@@ -1,28 +1,33 @@
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateAutorDto } from './create-autor.dto';
-import { IsDate, IsEmail, IsOptional, IsString } from '@nestjs/class-validator';
+import { IsDate, IsEmail, IsNumber, IsOptional, IsString } from '@nestjs/class-validator';
 import { Manga } from 'src/modules/manga/entities/manga.entity';
 
 export class UpdateAutorDto extends PartialType(CreateAutorDto) {
-    @IsDate()
     @IsOptional()
-    createAt : Date;
+    @IsDate()
+    createAt: Date;
 
-    @IsDate()
     @IsOptional()
-    updateAt : Date;
+    @IsDate()
+    updateAt: Date;    
     
+    @IsOptional()
     @IsDate()
-    @IsOptional()
-    deleteAt : Date;
+    deleteAt: Date;
 
+    
     @IsString()
     @IsOptional()
-    nombre: string
+    nombre: string;
 
-    @IsString()
+    @IsNumber()
     @IsOptional()
-    apellido: string;
+    code: number;
+
+    @IsNumber()
+    @IsOptional()
+    age: number;
     
     @IsEmail()
     @IsOptional()
@@ -32,9 +37,9 @@ export class UpdateAutorDto extends PartialType(CreateAutorDto) {
     @IsOptional()
     identificacion: string;
 
-    @IsString()
     @IsOptional()
-    description: string;
+    @IsDate()
+    birthday: Date;
 
     @IsOptional()
     manga: Manga

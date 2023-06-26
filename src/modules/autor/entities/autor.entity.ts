@@ -19,7 +19,7 @@ export class Autor {
         type: 'timestamp',
         default: ()=> 'CURRENT_TIMESTAMP'
     })
-    updateAt = Date;    
+    updateAt: Date;    
     
     @DeleteDateColumn({
         name: 'Deleted_at',
@@ -33,6 +33,7 @@ export class Autor {
         nullable: false,
         comment: 'Id del autor',    
     })
+    code: number;
 
     @Column('varchar',{
         name: 'nombre',
@@ -42,11 +43,11 @@ export class Autor {
     nombre: string;
 
     @Column('integer',{
-        name: 'Age',
+        name: 'age',
         nullable: false,
         comment: 'Edad del Autor'
     })
-    apellido: string;
+    age: number;
     
     @Column('varchar',{
         name: 'email',
@@ -63,11 +64,11 @@ export class Autor {
     identificacion: string;
 
     @Column('date',{
-        name: 'Birthday',
+        name: 'birthday',
         nullable: false,
         comment: 'Cumpleanios autor'
     })
-    description: string;
+    birthday: Date;
 
     @OneToMany(()=>Autor, autor=> autor.manga)
         manga: Manga

@@ -19,11 +19,7 @@ export class Autor {
         type: 'timestamp',
         default: ()=> 'CURRENT_TIMESTAMP'
     })
-<<<<<<< HEAD
-    updateAt : Date;
-=======
     updateAt = Date;    
->>>>>>> d0fec66bd550c7e29d5030bd619630d6a93609d4
     
     @DeleteDateColumn({
         name: 'Deleted_at',
@@ -32,13 +28,6 @@ export class Autor {
     })
     deleteAt : Date;
 
-<<<<<<< HEAD
-   
-    @Column('varchar',{
-        name: 'nombre',
-        nullable: false,
-        comment: 'nombre del autor'
-=======
     @Column('integer',{
         name: 'code',
         nullable: false,
@@ -49,21 +38,13 @@ export class Autor {
         name: 'nombre',
         nullable: false,
         comment: 'Nombre del autor'
->>>>>>> d0fec66bd550c7e29d5030bd619630d6a93609d4
     })
     nombre: string;
 
-<<<<<<< HEAD
-    @Column('varchar',{
-        name: 'apellido',
-        nullable: false,
-        comment: 'apellido del autor'
-=======
     @Column('integer',{
         name: 'Age',
         nullable: false,
         comment: 'Edad del Autor'
->>>>>>> d0fec66bd550c7e29d5030bd619630d6a93609d4
     })
     apellido: string;
     
@@ -84,11 +65,7 @@ export class Autor {
     @Column('date',{
         name: 'Birthday',
         nullable: false,
-<<<<<<< HEAD
-        comment: 'descripción del autor'
-=======
         comment: 'Cumpleanios autor'
->>>>>>> d0fec66bd550c7e29d5030bd619630d6a93609d4
     })
     description: string;
 

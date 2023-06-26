@@ -1,3 +1,4 @@
+import { IsDate, IsNotEmpty, IsNotEmptyObject, IsNumber, IsOptional, IsString } from "@nestjs/class-validator";
 import { Autor } from "src/modules/autor/entities/autor.entity";
 
 export class CreateMangaDto {

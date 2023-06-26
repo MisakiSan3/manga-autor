@@ -1,6 +1,7 @@
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateMangaDto } from './create-manga.dto';
 import { Autor } from 'src/modules/autor/entities/autor.entity';
+import { IsDate, IsNumber, IsOptional, IsString } from '@nestjs/class-validator';
 
 export class UpdateMangaDto extends PartialType(CreateMangaDto) {
     @IsOptional()

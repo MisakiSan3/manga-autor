@@ -1,5 +1,5 @@
-import { Autor } from "src/modules/autor/entities/autor.entity";
-import { PrimaryGeneratedColumn,CreateDateColumn,UpdateDateColumn,DeleteDateColumn,Column,OneToMany, ManyToOne } from "typeorm";
+/* eslint-disable prettier/prettier */
+import { PrimaryGeneratedColumn,CreateDateColumn,UpdateDateColumn,DeleteDateColumn,Column, ManyToOne } from "typeorm";
 
 export class Manga {
     @PrimaryGeneratedColumn('uuid')

@@ -22,6 +22,26 @@ export class CreateMangaDto {
     @IsNotEmpty()
     nombre: string;
 
+    @IsString()
+    @IsOptional()
+    edicion:String;
+
+    @IsString()
+    @IsOptional()
+    editorial:String;
+
+    @IsString()
+    @IsOptional()
+    precio:number;
+
+    @IsString()
+    @IsOptional()
+    descripcion:String;
+
+    @IsString()
+    @IsOptional()
+    images:string;
+
     @IsNotEmptyObject()
     autor:Autor
 }

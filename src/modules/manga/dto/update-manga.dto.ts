@@ -23,6 +23,26 @@ export class UpdateMangaDto extends PartialType(CreateMangaDto) {
     @IsOptional()
     nombre: string;
 
+    @IsString()
+    @IsOptional()
+    edicion:String;
+
+    @IsString()
+    @IsOptional()
+    editorial:String;
+
+    @IsString()
+    @IsOptional()
+    precio:number;
+
+    @IsString()
+    @IsOptional()
+    descripcion:String;
+
+    @IsString()
+    @IsOptional()
+    images:string;
+
     @IsOptional()
     autor:Autor
 }

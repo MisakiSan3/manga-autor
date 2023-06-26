@@ -15,30 +15,13 @@ export class UpdateMangaDto extends PartialType(CreateMangaDto) {
     @IsDate()
     deleteAt: Date;
 
-    
-    @IsString()
-    @IsOptional()
-    nombre: string;
-
     @IsNumber()
     @IsOptional()
     code: number;
 
-    @IsNumber()
-    @IsOptional()
-    age: number;
-    
-    @IsEmail()
-    @IsOptional()
-    email: string;
-
     @IsString()
     @IsOptional()
-    identificacion: string;
-
-    @IsOptional()
-    @IsDate()
-    birthday: Date;
+    nombre: string;
 
     @IsOptional()
     autor:Autor
